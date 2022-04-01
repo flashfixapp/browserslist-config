@@ -21,7 +21,7 @@
     "validate": "node scripts/validate.js",
     "lint": "eslint .",
     "check": "npm run lint && npm run validate",
-    "prepublishOnly": "npm check"
+    "prepublishOnly": "npm run check"
   },
   "devDependencies": {
     "browserslist": "^4.20.2",
