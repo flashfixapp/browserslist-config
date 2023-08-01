@@ -1,0 +1,31 @@
+{
+  "name": "@flashfix/browserslist-config",
+  "description": "Browserslist shared config",
+  "author": "flashfix <max@flashfix.app>",
+  "license": "MIT",
+  "repository": "flashfixapp/browserslist-config",
+  "bugs": "https://github.com/flashfixapp/browserslist-config/issues",
+  "version": "1.1.0",
+  "keywords": [
+    "browserslist",
+    "browserslist-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
+  "scripts": {
+    "reinstall": "rm -rf node_modules package-lock.json && npm install",
+    "supported-browsers": "node scripts/supported.js",
+    "validate": "node scripts/validate.js",
+    "lint": "eslint .",
+    "check": "npm run lint && npm run validate",
+    "prepublishOnly": "npm run check"
+  },
+  "devDependencies": {
+    "browserslist": "^4.20.3",
+    "eslint": "^8.9.0",
+    "eslint-config-flashfix-base": "^1.0.1"
+  }
+}
